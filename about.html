@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .about-img {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .paragraph {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .paragraph h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .paragraph p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+
+        }
+        
+
+        .front-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        
+        }
+        .front-text h2 {
+            font-size: 20px;
+        
+        }
+        .status-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            
+        }
+        .status-card {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            height: 250px;
+            width: 200px;
+            border:0.75px solid rgba(143, 142, 142, 0.919);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .status-card-icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            filter: invert(34%) sepia(100%) saturate(749%) hue-rotate(90deg) brightness(95%) contrast(92%);
+            
+        }
+        .status-card-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            width: 70px;
+            height: 70px;
+            
+            border-radius: 50%;
+            background-color: #dff5e5;
+        }
+
+        .status-card p {
+            font-size: 16px;
+            color: #555;
+            padding-top: 40px;
+        }
+
+        .status-card h2 {
+            font-size: 24px;
+            padding-top: 25px;
+        }
+
+        .mNv{
+            margin-top: 50px;
+            
+
+        }
+        .mNv h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .mNv-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .mNv-cards {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 250px;
+            height: 300px;
+            border:0.75px solid rgba(143, 142, 142, 0.919);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .mNv-cards h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: left;
+            align-self: flex-start;
+            position: absolute;
+            top:130px;
+        }
+        .mNv-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border-radius: 50%;
+            background-color: #dff5e5;
+        }
+
+        .mNv-icons img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+
+        .mNv-cards p {
+            font-size: 16px;
+            color: #555;
+            text-align: left;
+            align-self: flex-start;
+            position: absolute;
+            top: 190px;
+        }
+
+        .team {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .team h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .team-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            height: 300px;
+            border:0.75px solid rgba(143, 142, 142, 0.919);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .team-card h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .team-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        #mission-icon {
+            background-color: #dff5e5 !important;
+        }
+
+        #authenticity-icon {
+            background-color: #DBEAFE !important;
+        }
+
+        #excellence-icon {
+            background-color: #F3E8FF !important;
+        }
+
+        #mission-icon img{
+            filter: invert(34%) sepia(100%) saturate(749%) hue-rotate(90deg) brightness(95%) contrast(92%);
+        }
+
+        #authenticity-icon img{
+            filter:invert(21%) sepia(95%) saturate(7470%) hue-rotate(225deg) brightness(95%) contrast(101%);
+        }
+        #excellence-icon img{
+            
+            filter: invert(22%) sepia(95%) saturate(7470%) hue-rotate(265deg) brightness(95%) contrast(101%);
+        }
+
+    </style>
+</head>
+
+<body>
+
+  
+    <header>
+        <div class="site-logo">
+            <img src="" alt="">
+            <h1></h1>
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Stay & Eat</a>
+            <a href="#">Plan Trip</a>
+            <a href="#" class = "active">About</a>
+            <a href="#">contact</a>
+            <!-- <a href="#">&#128269;</a> 
+            <a href="#">&#10084;</a> -->
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section class = "about-img">
+            <img src="../Images/example.jpg" alt="Sigiriya Rock Sri Lanka">
+            <div class="overlay"></div> 
+            
+            <div class="front-text">
+                <h1>About </h1>
+                <h2>Connecting travelers with the authentic beauty of Sri Lanka</h2>
+            </div>
+        </section>
+
+        <section class="paragraph">
+            <h1>Our Story</h1>
+            <p>bla bla bla</p>
+        </section>
+
+        <section class  = "status">
+            <div class = "status-container">
+                
+                <div class = "status-card">
+                    <div class="status-card-icon">
+                        <img src="../Images/people.svg" alt="Active Users">
+                    </div>
+                    <h2>67</h2>
+                    <p>Active Users</p>
+                </div>     
+            
+            
+                <div class = "status-card">
+                    <div class="status-card-icon">
+                        <img src="../Images/locationIcon.svg" alt="Destinations">
+                    </div>
+                    <h2>69</h2>
+                    <p>Destinations</p>
+                </div>     
+                
+            
+                <div class = "status-card">
+                    <div class="status-card-icon">
+                        <img src="../Images/heart.svg" alt="Happy Travelers">
+                    </div>
+                    <h2>67</h2>
+                    <p>Happy Travelers</p>
+                </div>     
+
+            
+                <div class = "status-card">
+                    <div class="status-card-icon">
+                        <img src="../Images/medal.svg" alt="...">
+                    </div>
+                    <h2>69</h2>
+                    <p>bla bla bla</p>
+                </div>     
+                
+            
+            </div>
+
+        </section>
+
+        <section class = "mNv">
+            <h1>Our Mission & Values</h1>
+            <div class = "mNv-container">
+                <div class = "mNv-cards">
+                    <div class = "mNv-icons" id = "mission-icon">
+                        <img src="../Images/target.svg" alt="Mission">
+                    </div>
+                    <h1>Our Mission</h1>
+                    <p>.</p>
+                </div>
+
+                <div class = "mNv-cards">
+                    <div class = "mNv-icons" id = "authenticity-icon">
+                        <img src="../Images/heart.svg" alt="Authenticity">
+                    </div>
+                    <h1>Authenticity</h1>
+                    <p>.nigga</p>
+                </div>
+
+                <div class = "mNv-cards">
+                    <div class = "mNv-icons" id = "excellence-icon">
+                        <img src="../Images/medal2.svg" alt="Excellence">
+                    </div>
+                    <h1>Excellence</h1>
+                    <p>.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class = "team">
+                <h1>Meet Our Team</h1>
+                <div class = "team-container">
+                    <div class = "team-card">
+                        <img src="Images/.jpg" alt="Team Member 1">
+                        <div class = "tc-text">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class = "team-card">
+                        <img src="Images/.jpg" alt="Team Member 2">
+                        <div class = "tc-text">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class = "team-card">
+                        <img src="Images/.jpg" alt="Team Member 3">
+                        <div class = "tc-text">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class = "team-card">
+                        <img src="Images/.jpg" alt="Team Member 4">
+                        <div class = "tc-text">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+
+    </main>
+
+    <footer>
+        
+    </footer>
+
+</body>
+</html>
